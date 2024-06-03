@@ -2,43 +2,96 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px dotted green; */
+    /* border: 1px dashed green; */
 }
 
-nav {
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5px;
+    padding: 5px;
+}
+
+.container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 2%;
+}
+
+.image {
+    display: block;
     width: 100%;
-    height: 85px;
+    height: 100%;
+    background-color: red;
+    border-radius: 2%;
+}
+
+.Loverlay {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 0.5rem;
-    background-image: linear-gradient(to right, rgb(2, 2, 2), rgb(65, 65, 65));
+    position: absolute;
+    border-radius: 2%;
+    background-color: rgba(9, 233, 47, 0.7);
+    opacity: 0;
+    transition: all 0.7s ease-out;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 0;
 }
 
-.logo {
-    width: 80px;
-    height: 80px;
-}
-
-ul {
-    list-style: none;
+.Roverlay {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    position: absolute;
+    border-radius: 2%;
+    background-color: rgba(9, 233, 47, 0.7);
+    opacity: 0;
+    transition: all 0.7s ease-out;
+    height: 100%;
+    top: 0;
+    right: 0;
+    width: 0;
 }
 
-ul li {
-    margin: 8px;
+.Uoverlay {
+    display: flex;
+    position: absolute;
+    border-radius: 2%;
+    background-color: rgba(9, 233, 47, 0.7);
+    opacity: 0;
+    transition: all 0.7s ease-out;
+    width: 100%;
+    top: 0;
+    height: 0;
 }
 
-ul li a {
-    text-decoration: none;
+.Boverlay {
+    display: flex;
+    position: absolute;
+    border-radius: 2%;
+    background-color: rgba(9, 233, 47, 0.7);
+    opacity: 0;
+    transition: all 0.7s ease-out;
+    width: 100%;
+    bottom: 0;
+    height: 0;
+}
+
+.container:hover .Hoverlay {
+    width: 100%;
+    opacity: 1;
+}
+
+.container:hover .Voverlay {
+    height: 100%;
+    opacity: 1;
+}
+
+.text {
+    margin: auto;
+    font-size: 2rem;
     color: #fff;
-    font-size: large;
-    padding: 3px 7px;
-    background-color: #ff8539;
-}
-
-ul li a:hover {
-    background-color: black;
 }
