@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: auto;
+    width: 75%;
+    height: auto;
+    background: lightgoldenrodyellow;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    gap: 20px;
+    padding: 20px 20px;
+}
+
+.container .card {
+    background: #f5f6;
+    border-radius: 2%;
+    height: 400px;
+    width: 300px;
+    position: relative;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.container .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2%;
+}
+
+.container .card .fiximage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2%;
+    object-position: 0 0;
+}
+
+.container .card div {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2%;
+    background: rgba(255, 255, 255, 0.5);
+    transition: all 0.7s ease-out;
+    font-size: 2rem;
+    color: #333;
+}
+
+.Shino {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    opacity: 0;
+}
+
+.card:hover .Shino {
+    width: 100%;
+    opacity: 1;
+}
+
+.Shikamaru {
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    opacity: 0;
+}
+
+.card:hover .Shikamaru {
+    width: 100%;
+    opacity: 1;
+}
+
+.Naruto {
+    top: 0;
+    height: 0;
+    width: 100%;
+    opacity: 0;
+}
+
+.card:hover .Naruto {
+    height: 100%;
+    opacity: 1;
+}
+
+.Sai {
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    opacity: 0;
+}
+
+.card:hover .Sai {
+    height: 100%;
+    opacity: 1;
+}
+
+.Neji {
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
+
+.card:hover .Neji {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.Lee {
+    top: 0;
+    right: 0;
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
+
+.card:hover .Lee {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.Kiba {
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
+
+.card:hover .Kiba {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.Choji {
+    bottom: 0;
+    right: 0;
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
+
+.card:hover .Choji {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.card:hover .Sasuke {
+    opacity: 1;
+}
+
+.Sasuke {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
