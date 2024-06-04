@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* rgb(113, 1, 147) */
+    /* border: 1px dashed red; */
+    letter-spacing: 0.5px;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('./bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    width: 420px;
+    display: flex;
+    background: rgb(113, 1, 147, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgb(113, 1, 147, 0.2);
+    justify-content: center;
+    padding: 40px;
+    border-radius: 2%;
+}
+
+.container h1 {
+    color: #fff;
+    text-align: center;
+}
+
+.container .input_box {
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    position: relative;
+}
+
+.input_box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgb(113, 1, 147, 0.2);
+    outline: none;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 50px;
+    padding: 20px 45px 20px 20px;
+}
+
+.input_box input::placeholder {
+    color: #fff;
+}
+
+.input_box i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    margin: -10px 0 20px;
+}
+
+.remember-forgot label {
+    color: #fff;
+}
+
+.remember-forgot label input {
+    accent-color: purple;
+    margin-right: 5px;
+}
+
+.remember-forgot a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.container .btn {
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    margin-bottom: 30px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: transparent;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    background-image: linear-gradient(to bottom right, rgba(113, 1, 147, 0.6), rgba(113, 1, 147, 0.1));
+}
+
+.container .btn:hover {
+    background-image: linear-gradient(to top left, rgba(113, 1, 147, 0.6), rgba(113, 1, 147, 0.1));
+}
+
+.container .register {
+    font-size: 1.1rem;
+    text-align: center;
+    color: #fff;
+}
+
+.container .register a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.container .register a:hover {
+    text-decoration: underline;
+}
