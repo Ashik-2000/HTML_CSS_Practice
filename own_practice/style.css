@@ -5,151 +5,61 @@
     /* border: 1px dashed ; */
 }
 
-body {
-    height: 100vh;
+.tag {
+    margin: 50px;
+    height: 50px;
+    width: 80px;
+    background: #f00;
+    color: #fff;
+    font-size: 1.7rem;
+    padding: 0 7px 0 0;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
+    clip-path: polygon(0% 40%, 20% 0%, 100% 0%, 100% 100%, 20% 100%, 0% 60%);
+    border-radius: 5px;
+    position: relative;
+    transform: rotate(30deg);
 }
 
-.parent {
-    width: 400px;
-    height: 400px;
-    background: greenyellow;
+.tag::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border-radius: 50%;
+    left: 6px;
+}
+
+.flashlight {
+    width: 80px;
+    height: 30px;
+    margin: 50px;
+    background: #f00;
+    border-radius: 10%/20%;
     position: relative;
 }
 
-.fichild,
-.schild,
-.tchild,
-.fchild {
-    width: 50%;
-    height: 50%;
+.flashlight::before {
+    content: "";
     position: absolute;
+    width: 0;
+    height: 30px;
+    border-right: 20px solid yellow;
+    border-bottom: 20px solid transparent;
+    border-top: 20px solid transparent;
+    left: 70px;
+    top: -20px;
 }
 
-.fichild,
-.tchild {
-    background: skyblue;
-}
 
-.schild,
-.fchild {
-    background: magenta;
-}
-
-.fichild {
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    animation: fichild 3s linear infinite;
-}
-
-@keyframes fichild {
-    0% {
-        transform: translate(-50%, -50%);
-    }
-
-    25% {
-        transform: translate(150%, -50%);
-    }
-
-    50% {
-        transform: translate(150%, 150%);
-    }
-
-    75% {
-        transform: translate(-50%, 150%);
-    }
-
-    100% {
-        transform: translate(-50%, -50%);
-    }
-}
-
-.tchild {
-    bottom: 0;
-    right: 0;
-    transform: translate(50%, 50%);
-    animation: tchild 3s linear infinite;
-}
-
-@keyframes tchild {
-    0% {
-        transform: translate(50%, 50%);
-    }
-
-    25% {
-        transform: translate(-150%, 50%);
-    }
-
-    50% {
-        transform: translate(-150%, -150%);
-    }
-
-    75% {
-        transform: translate(50%, -150%);
-    }
-
-    100% {
-        transform: translate(50%, 50%);
-    }
-}
-
-.schild {
-    top: 0;
-    right: 0;
-    transform: translate(50%, -50%);
-    animation: schild 3s linear infinite;
-}
-
-@keyframes schild {
-    0% {
-        transform: translate(50%, -50%);
-    }
-
-    25% {
-        transform: translate(50%, 150%);
-    }
-
-    50% {
-        transform: translate(-150%, 150%);
-    }
-
-    75% {
-        transform: translate(-150%, -50%);
-    }
-
-    100% {
-        transform: translate(50%, -50%);
-    }
-}
-
-.fchild {
-    bottom: 0;
-    left: 0;
-    transform: translate(-50%, 50%);
-    animation: fchild 3s linear infinite;
-}
-
-@keyframes fchild {
-    0% {
-        transform: translate(-50%, 50%);
-    }
-
-    25% {
-        transform: translate(-50%, -150%);
-    }
-
-    50% {
-        transform: translate(150%, -150%);
-    }
-
-    75% {
-        transform: translate(150%, 50%);
-    }
-
-    100% {
-        transform: translate(-50%, 50%);
-    }
+.flashlight::after {
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 10px;
+    background: #f00;
+    left: 90px;
+    top: -20px;
 }
