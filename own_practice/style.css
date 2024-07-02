@@ -5,61 +5,71 @@
     /* border: 1px dashed ; */
 }
 
-.tag {
-    margin: 50px;
-    height: 50px;
-    width: 80px;
-    background: #f00;
-    color: #fff;
-    font-size: 1.7rem;
-    padding: 0 7px 0 0;
+body {
+    height: 100vh;
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
-    clip-path: polygon(0% 40%, 20% 0%, 100% 0%, 100% 100%, 20% 100%, 0% 60%);
-    border-radius: 5px;
-    position: relative;
-    transform: rotate(30deg);
 }
 
-.tag::before {
-    content: "";
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    background: #fff;
+.parent>ul {
+    list-style: none;
+    display: flex;
+}
+
+.parent>ul>li {
+    height: 60px;
+    width: 60px;
+    align-content: center;
+    text-align: center;
+    border: 1px solid #555;
     border-radius: 50%;
-    left: 6px;
-}
-
-.flashlight {
-    width: 80px;
-    height: 30px;
-    margin: 50px;
-    background: #f00;
-    border-radius: 10%/20%;
+    margin: 10px;
     position: relative;
+    overflow: hidden;
 }
 
-.flashlight::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 30px;
-    border-right: 20px solid yellow;
-    border-bottom: 20px solid transparent;
-    border-top: 20px solid transparent;
-    left: 70px;
-    top: -20px;
+.parent>ul>li>a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5rem;
+    transition: all 0.7s ease;
+    display: block;
 }
 
-
-.flashlight::after {
-    content: "";
+.parent>ul>li::before {
+    content: '';
     position: absolute;
-    height: 70px;
-    width: 10px;
-    background: #f00;
-    left: 90px;
-    top: -20px;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0%;
+    transition: all 0.7s ease;
+    z-index: -1;
+}
+
+.parent>ul>li:first-child::before {
+    background: #4867AA;
+}
+
+.parent>ul>li:nth-child(2)::before {
+    background: #FC08A9;
+}
+
+.parent>ul>li:nth-child(3)::before {
+    background: #FF0303;
+}
+
+.parent>ul>li:last-child::before {
+    background: #080808;
+}
+
+.parent>ul>li:hover::before {
+    top: 0;
+}
+
+.parent>ul>li:hover {
+    >a {
+        color: #fff;
+    }
 }

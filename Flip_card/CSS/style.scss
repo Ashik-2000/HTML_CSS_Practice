@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$width: 300px;
+$height: 400px;
+
+@mixin centerdiv() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flipcard() {
+    width: $width;
+    height: $height;
+    position: relative;
+    transition: all 1s ease;
+    transform-style: preserve-3d;
+}
+
+@mixin frontandback($bg) {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: $bg;
+    text-align: center;
+    line-height: $height;
+    font-size: 2rem;
+    backface-visibility: hidden;
+}
+
+body {
+    height: 100vh;
+    @include centerdiv();
+    gap: 50px;
+}
+
+.flip2d,
+.flip3d {
+    >.flipcard {
+        @include flipcard();
+
+        >.front {
+            @include frontandback(#E87C7B);
+        }
+
+        >.back {
+            @include frontandback(#B973ED);
+            transform: rotateY(-180deg);
+        }
+    }
+}
+
+.flip2d {
+    &:hover {
+        >.flipcard {
+            transform: rotateY(180deg);
+        }
+    }
+}
+
+.flip3d {
+    perspective: 1000px;
+
+    &:hover {
+        >.flipcard {
+            transform: rotateY(180deg);
+        }
+    }
+}
