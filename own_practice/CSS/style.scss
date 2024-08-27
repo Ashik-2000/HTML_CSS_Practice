@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$height: 35px;
+
+@mixin flex_center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin transition{
+    transition: 0.25s;
+}
+
+body {
+    height: 100vh;
+    @include flex_center();
+    background-image: linear-gradient(rgba(255,255,255,0.15)),url(../bg.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff
+}
+
+.parent {
+    @include border(#fff);
+    width: 350px;
+    height: 500px;
+    @include flex_center();
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 2%;
+
+    >form {
+        width: 90%;
+        height: 80%;
+        @include flex_center();
+        flex-direction: column;
+        gap: 50px;
+
+        >.input_box {
+            width: 100%;
+            height: 60px;
+            position: relative;
+
+            >input {
+                position: absolute;
+                bottom: 0;
+                height: $height;
+                width: 100%;
+                border: none;
+                background-color: none;
+                outline: none;
+                background: transparent;
+                z-index: 5;
+                padding: 0 30px 0 10px;
+                &:valid ~ span,
+                &:focus ~ span{
+                    top: 0;
+                    font-size: 1rem;
+                }
+                &:focus ~ #icon,
+                &:valid ~ #icon{
+                    color: #000;
+                }
+                &:focus ~ .underline,
+                &:valid ~ .underline{
+                    height: $height;
+                }
+            }
+
+            >span {
+                position: absolute;
+                font-size: 1.2rem;
+                bottom: 2px;
+                cursor: none;
+                @include transition()
+            }
+
+            >#icon{
+                position: absolute;
+                right: 1px;
+                font-size: 1.2rem;
+                bottom: 7.5px;
+                z-index: 5;
+                @include transition();
+            }
+
+            >.underline {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+                border-radius: 5px;
+                background-color: #fff;
+                @include transition();
+            }
+        }
+        >.links{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            >a{
+                text-decoration: none;
+                color: #fff;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+        >.btn{
+            width: 80%;
+            height: $height;
+            cursor: pointer;
+        }
+    }
+}

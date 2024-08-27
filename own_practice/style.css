@@ -12,52 +12,42 @@ body {
     align-items: center;
 }
 
-.parent {
-    width: 50px;
-    height: 45px;
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    border: 1px solid black;
+.flip2d {
+    height: 500px;
+    width: 400px;
+    perspective: 1000px;
 }
 
-.block {
-    height: 45px;
-    width: 10px;
-    background: green;
-    animation: animate 1.8s linear infinite;
+.flipcard2d {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    line-height: 500px;
+    font-size: 2rem;
+    transform-style: preserve-3d;
+    transition: 0.5s all ease;
 }
 
-.parent>div:nth-child(2) {
-    animation-delay: 0.5s;
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
 }
 
-.parent>div:nth-child(3) {
-    animation-delay: 01s;
+.front {
+    background-color: lightcoral;
 }
 
-.parent>div:nth-child(4) {
-    animation-delay: 0.8s;
+.back {
+    background-color: lightgreen;
+    transform: rotateY(-180deg);
 }
 
-@keyframes animate {
-    0% {
-        height: 4.5px;
-    }
-
-    25% {
-        height: 27px;
-    }
-
-    50% {
-        height: 13px;
-    }
-
-    75% {
-        height: 45px;
-    }
-
-    100% {
-        height: 4.5px;
+.flip2d:hover {
+    .flipcard2d {
+        transform: rotateY(180deg);
     }
 }
