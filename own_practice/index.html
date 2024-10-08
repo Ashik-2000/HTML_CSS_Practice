@@ -4,34 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./CSS/style.min.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>My Personal Blog</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="parent">
-        <form action="#">
-            <h1>Login</h1>
-            <div class="input_box">
-                <input type="text" required>
-                <span>Username</span>
-                <i class='bx bxs-user' id="icon"></i>
-                <i class="underline"></i>
-            </div>
-            <div class="input_box">
-                <input type="password" required>
-                <span>Password</span>
-                <i class='bx bxs-lock-alt' id="icon"></i>
-                <i class="underline"></i>
-            </div>
-            <div class="links">
-                <a href="#">Create new account</a>
-                <a href="#">Forogt Password?</a>
-            </div>
-            <input class="btn" type="submit" value="Login">
-        </form>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>My Personal Blog</h1>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="container content-area">
+        <main>
+            <article class="blog-post">
+                <h2>Blog Post Title</h2>
+                <p>This is a short excerpt from the blog post. It gives a quick overview of the topic being discussed in
+                    the
+                    post. You can add more text to elaborate the blog content.</p>
+                <img src="https://via.placeholder.com/600x400" alt="Blog Post Image">
+            </article>
+        </main>
+
+        <!-- Sidebar Section -->
+        <aside class="sidebar">
+            <h3>Recent Posts</h3>
+            <ul>
+                <li><a href="#">Post 1</a></li>
+                <li><a href="#">Post 2</a></li>
+                <li><a href="#">Post 3</a></li>
+            </ul>
+        </aside>
     </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Personal Blog</p>
+        </div>
+    </footer>
+
 </body>
 
 </html>
