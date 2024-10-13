@@ -18,12 +18,13 @@ img{
 h1,h2,h3{
     font-family: 'Lora', serif;
     font-weight: 400;
+    color: #143774;
+    margin-top: 0;
 }
 
 h1{
-    color: #143774;
     font-size: 2rem;
-    margin: 0;
+    margin: 0; 
 }
 
 a{
@@ -60,10 +61,15 @@ strong{
     text-decoration: none;
     font-weight: 700;
 }
+
 .article-read-more:hover,
 .article-read-more:focus{
     color: #143774;
     text-decoration: underline;
+}
+
+.article-info{
+    margin: 2em 0;
 }
 
 
@@ -86,8 +92,43 @@ header {
     background-color: #f8f8f8;
     padding: 2em 0;
     text-align: center;
+    margin-bottom: 2em;
 }
 
+.article-featured {
+    border-bottom: #707070 1px solid;
+    padding-bottom: 2em;
+    margin-bottom: 2rem;
+}
+
+/* ----- Articles ----- */
+
+.article-featured{
+    display: flex;
+    flex-direction: column;
+}
+
+.article-image{
+    order: -2;
+}
+
+.article-info{
+    order: -1;
+}
+
+.article-recent{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+.article-recent-main{
+    order: 2;
+}
+
+.article-recent-secondary{
+    order: 1; 
+}
 
 /* ----- Navigation ----- */
 
@@ -114,9 +155,9 @@ nav a:focus{
     color: #1799d2;
 }
 
+
 /* ========== Media Query ========== */
 
-/* ----- Navigation ----- */
 
 @media (min-width: 800px){
     .container-flex{
@@ -138,3 +179,24 @@ nav a:focus{
         width: 20%;
     }
 }
+
+/* ---------- Article-recent ----------*/
+
+@media (min-width: 800px){
+    .article-recent{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .article-recent-main{
+        width: 68%;
+    }
+    .article-recent-secondary{
+        width: 30%;
+    }
+    .article-image{
+        width: 100%;
+        min-height: 250px;
+        object-fit: cover;
+    }
+}
+
