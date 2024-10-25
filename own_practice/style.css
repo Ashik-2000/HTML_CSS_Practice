@@ -5,30 +5,52 @@
     box-sizing: border-box;
 }
 
-.main{
+.main {
+    width: 900px;
+    margin: auto;
     margin-top: 4em;
-    width: 100%;
-    padding: 1em 5em;
+    padding: 1em 0;
 }
 
-.track{
+.track {
     width: 100%;
-    border-bottom: 1px dashed ;
+    border-bottom: 1px dashed;
     border-right: 1px dashed;
 }
 
-.object{
+.object {
     height: 50px;
     width: 50px;
     background-color: red;
-    transition: all 0.5s ease;
 }
 
-p{
+.ease {
+    animation: move 1.5s ease infinite;
+}
+
+.ease-in {
+    animation: move 1.5s ease-in infinite;
+}
+
+.ease-in-out {
+    animation: move 1.5s ease-in-out infinite;
+}
+
+.ease-out {
+    animation: move 1.5s ease-out infinite;
+}
+
+.linear {
+    animation: move 1.5s linear infinite;
+}
+
+p {
     font-size: 1.5rem;
     margin-bottom: 3em;
 }
 
-p:hover.object{
-    transform: translateX(600px);
+@keyframes move {
+    100% {
+        transform: translateX(900px);
+    }
 }
